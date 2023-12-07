@@ -16,25 +16,20 @@ export default function Home() {
                     `http://10.16.16.41:31371/api/v1/hosts/850b9f41-94ea-11ee-9aae-0242ac140002/applications?page=0&size=10&sort[name]=createdAt&sort[option]=ASC&firstView=true`
                 );
 
-                const streamingData = res.data.data.filter(
-                    (item: any) => item.type === 'STREAMING' || item.type === 'LIVE'
-                );
-                // const chatData = res.data.data.filter((item: any) => item.type === 'CHAT');
+                const streamingData = res.data.data
+                    .filter(
+                        (item: any) =>
+                            (item.type === 'STREAMING' || item.type === 'LIVE') &&
+                            item.session != null &&
+                            item.session.deletedAt == null
+                    )
+                    .map((item: any) => ({
+                        streamSessionId: item.session.id,
+                        streamApiKey: item.apiKey,
+                    }));
 
-                let updatedSessionList = [];
-
-                const length = streamingData.length;
-                for (let i = 0; i < length; i++) {
-                    updatedSessionList.push({
-                        streamSessionId: streamingData[i] ? streamingData[i].session.id : '',
-                        streamApiKey: streamingData[i] ? streamingData[i].apiKey : '',
-                        // chatSessionId: chatData[i] ? chatData[i].session.id : '',
-                        // chatApiKey: chatData[i] ? chatData[i].apiKey : '',
-                    });
-                }
-
-                console.log(updatedSessionList);
-                setSessionList(updatedSessionList);
+                console.log(streamingData);
+                setSessionList(streamingData);
             } catch (e) {
                 console.log(e);
             }
