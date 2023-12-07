@@ -28,7 +28,6 @@ export default function Home() {
                         streamApiKey: item.apiKey,
                     }));
 
-                console.log(streamingData);
                 setSessionList(streamingData);
             } catch (e) {
                 console.log(e);
