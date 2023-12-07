@@ -12,7 +12,7 @@
         "@types/react-dom": "^18.2.15",
         "axios": "^1.6.2",
         "hls.js": "^1.4.12",
-        "instream-sdk": "^0.0.11",
+        "instream-sdk": "^0.0.12",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.19.0",
