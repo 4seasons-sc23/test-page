@@ -1,0 +1,25 @@
+.container {
+    padding: 50px 10%;
+    overflow: hidden;
+}
+
+.itemContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+.live {
+    width: 420px;
+    height: 280px;
+}

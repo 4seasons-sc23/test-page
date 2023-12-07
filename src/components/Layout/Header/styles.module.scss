@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    height: 80px;
+    border-bottom: 0.5px solid #e5e5e5;
+    padding: 0 3.5%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+.button {
+    border: none;
+    background: none;
+    color: #999999;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        color: #000000;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+}
+
+.buttonArea {
+    display: flex;
+    gap: 10px;
+}
+
+.divider {
+    border: 0.5px solid #e5e5e5;
+}
