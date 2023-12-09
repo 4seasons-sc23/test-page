@@ -12,8 +12,10 @@ export default function Stream() {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
 
-    const streamSessionId = params.get('streamSessionId');
-    const streamApiKey = params.get('streamApiKey');
+    const sessionId = params.get('sessionId');
+    const ApiKey = params.get('ApiKey');
+
+    const type = params.get('type');
 
     const participantId = sessionStorage.getItem('id');
     const nickname = sessionStorage.getItem('name');
@@ -22,17 +24,17 @@ export default function Stream() {
         <div className={styles.page}>
             <div className={styles.container}>
                 <Live
-                    ApiKey={streamApiKey}
-                    sessionId={streamSessionId}
+                    ApiKey={ApiKey}
+                    sessionId={sessionId}
                     participantId={participantId}
                     nickname={nickname}
                     customControl
                 />
             </div>
-            {streamSessionId && streamApiKey && (
+            {type === 'LIVE' && (
                 <Chat
-                    ApiKey={streamApiKey}
-                    sessionId={streamSessionId}
+                    ApiKey={ApiKey || ''}
+                    sessionId={sessionId || ''}
                     participantId={participantId || ''}
                     nickname={nickname || ''}
                 />

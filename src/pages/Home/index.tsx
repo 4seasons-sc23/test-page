@@ -23,10 +23,21 @@ export default function Home() {
                             item.session != null &&
                             item.session.deletedAt == null
                     )
-                    .map((item: any) => ({
-                        streamSessionId: item.session.id,
-                        streamApiKey: item.apiKey,
-                    }));
+                    .map((item: any) =>
+                        item.type === 'STREAMING'
+                            ? {
+                                  streamSessionId: item.session.id,
+                                  streamApiKey: item.apiKey,
+                                  type: item.type,
+                              }
+                            : {
+                                  streamSessionId: item.session.id,
+                                  streamApiKey: item.apiKey,
+                                  chatSessionId: item.session.id,
+                                  chatApiKey: item.apiKey,
+                                  type: item.type,
+                              }
+                    );
 
                 setSessionList(streamingData);
             } catch (e) {
@@ -41,6 +52,9 @@ export default function Home() {
         {
             streamSessionId: '',
             streamApiKey: '',
+            chatSessionId: '',
+            chatApiKey: '',
+            type: '',
         },
     ]);
 
@@ -56,7 +70,7 @@ export default function Home() {
                             className={styles.item}
                             onClick={() =>
                                 navigate(
-                                    `/stream?streamSessionId=${item.streamSessionId}&streamApiKey=${item.streamApiKey}`
+                                    `/stream?sessionId=${item.streamSessionId}&ApiKey=${item.streamApiKey}&type=${item.type}`
                                 )
                             }
                         >
