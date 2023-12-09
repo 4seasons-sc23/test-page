@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
-// import Chat from '../../components/Instream/Chat';
 
-import { Live, Chat } from 'instream-sdk';
+import { Live } from 'instream-sdk';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
