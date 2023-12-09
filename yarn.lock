@@ -5289,10 +5289,10 @@ ini@^1.3.5:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
-instream-sdk@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/instream-sdk/-/instream-sdk-0.0.12.tgz#2b34a0c088f963586415637768971e31c73611d9"
-  integrity sha512-l3QquYZMWT6vyp/U9ismzomtNEdYCjvMUErIBA5YyAgSQ0TS6N8byI+PfN6iCYFYEYOzoze1q/UaA2H3yNXftQ==
+instream-sdk@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/instream-sdk/-/instream-sdk-0.0.15.tgz#f8335c0b8b889adfd18808ebc165a124d9b227b0"
+  integrity sha512-Xfo0L1roAVC2A/NnCs4/lGyEw+BSD9oARplOFS3powOKM5GosGEbNuuFFS8gMLQVRGYYzo+CUbMtGVQUWXkF/A==
   dependencies:
     "@testing-library/jest-dom" "^5.17.0"
     "@testing-library/react" "^13.4.0"
