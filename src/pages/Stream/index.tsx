@@ -1,10 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-// import InstreamLive from '../../components/Instream/Live/Instream';
-
 import styles from './styles.module.scss';
-// import Chat from '../../components/Instream/Chat';
 
 import { Live, Chat } from 'instream-sdk';
 

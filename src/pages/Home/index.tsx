@@ -12,7 +12,7 @@ export default function Home() {
         const getSessionList = async () => {
             try {
                 const res = await axios.get(
-                    `http://10.16.16.41:31371/api/v1/hosts/850b9f41-94ea-11ee-9aae-0242ac140002/applications?page=0&size=10&sort[name]=createdAt&sort[option]=ASC&firstView=true`
+                    `http://10.16.16.41:31371/api/v1/hosts/c67e3f09-9679-11ee-9aae-0242ac140002/applications?page=0&size=10&sort[name]=createdAt&sort[option]=ASC&firstView=true`
                 );
 
                 const streamingData = res.data.data
