@@ -37,6 +37,7 @@ export default function Header() {
                         <div style={{ cursor: 'pointer' }} onClick={() => navigate('/info')}>
                             {name}
                         </div>
+
                         <div className={styles.divider} />
                         <button onClick={onClickLogoutButton} className={styles.button}>
                             Log out
