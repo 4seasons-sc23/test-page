@@ -12,6 +12,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<router.Home />} />
                     <Route path="/signin" element={<router.Signin />} />
+                    <Route path="/info" element={<router.Info />} />
 
                     <Route path="/stream" element={<router.Stream />} />
                 </Routes>

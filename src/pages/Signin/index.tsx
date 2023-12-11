@@ -36,6 +36,9 @@ export default function SigninContainer() {
             alert('로그인에 성공했습니다.');
             window.sessionStorage.setItem('id', '3');
             window.sessionStorage.setItem('name', '유진');
+            window.sessionStorage.setItem('applicationId', 'c393886a-967c-11ee-9aae-0242ac140002');
+            window.sessionStorage.setItem('ApiKey', '65f5db4e-c44b-4271-a01b-8dbb03170d4c');
+            window.sessionStorage.setItem('type', 'STREAMING');
             navigate('/');
         }
 
@@ -43,6 +46,9 @@ export default function SigninContainer() {
             alert('로그인에 성공했습니다.');
             window.sessionStorage.setItem('id', '4');
             window.sessionStorage.setItem('name', '유지니');
+            window.sessionStorage.setItem('applicationId', 'c42a53bc-967c-11ee-9aae-0242ac140002');
+            window.sessionStorage.setItem('ApiKey', '04fc2fe6-de25-41e2-8d04-511189cdbb2a');
+            window.sessionStorage.setItem('type', 'LIVE');
             navigate('/');
         }
 

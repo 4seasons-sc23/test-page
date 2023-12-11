@@ -19,6 +19,9 @@ export default function Header() {
         if (window.confirm('정말 로그아웃 하시겠습니까 ?')) {
             sessionStorage.removeItem('id');
             sessionStorage.removeItem('name');
+            sessionStorage.removeItem('applicationId');
+            sessionStorage.removeItem('ApiKey');
+            sessionStorage.removeItem('type');
             window.location.href = '/';
         }
     };
@@ -31,7 +34,9 @@ export default function Header() {
             <div>
                 {name ? (
                     <div className={styles.buttonArea}>
-                        <div>{name}</div>
+                        <div style={{ cursor: 'pointer' }} onClick={() => navigate('/info')}>
+                            {name}
+                        </div>
                         <div className={styles.divider} />
                         <button onClick={onClickLogoutButton} className={styles.button}>
                             Log out
